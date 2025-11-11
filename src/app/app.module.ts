@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroesComponent,
+    // AppComponent,
+    // HeroesComponent,
     // HeroDetailComponent,
-    MessagesComponent
+    // MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +22,6 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     // no need to place any providers due to the `providedIn` flag...
   ],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
 export class AppModule { }
