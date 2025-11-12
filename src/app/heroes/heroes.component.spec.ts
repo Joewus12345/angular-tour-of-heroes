@@ -21,7 +21,9 @@ describe('HeroesComponent', () => {
         {
           provide: HeroService,
           useValue: {
-            searchHeroes: () => of([]),
+            getHeroes: () => of([{ id: 1, name: 'Hero 1' }]),
+            addHero: () => of({ id: 2, name: 'Hero 2' }),
+            deleteHero: () => of(void 0),
           },
         },
       ],

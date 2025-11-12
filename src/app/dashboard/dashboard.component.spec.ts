@@ -21,7 +21,8 @@ describe('DashboardComponent', () => {
         {
           provide: HeroService,
           useValue: {
-            searchHeroes: () => of([]),
+            // Return an observable with some dummy heroes
+            getHeroes: () => of([{ id: 1, name: 'Test Hero 1' }, { id: 2, name: 'Test Hero 2' }]),
           },
         },
       ],
