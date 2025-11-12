@@ -9,12 +9,12 @@ import { HeroService } from '../hero.service';
 
 // import { AppRoutingModule } from "../app-routing.module";
 import { RouterLink } from '@angular/router';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-hero-search',
   standalone: true,
-  imports: [NgFor, AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink],
   templateUrl: './hero-search.component.html',
   styleUrl: './hero-search.component.css'
 })
