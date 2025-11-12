@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+
 import { NgFor } from '@angular/common';
 import { AppRoutingModule } from "../app-routing.module";
+import { HeroSearchComponent } from "../hero-search/hero-search.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgFor, AppRoutingModule],
+  imports: [NgFor, AppRoutingModule, HeroSearchComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -17,10 +19,10 @@ export class DashboardComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
-    this.getHeroes
+    this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(1, 5))
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(1, 5));
   }
 }
