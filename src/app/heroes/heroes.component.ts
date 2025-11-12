@@ -4,12 +4,13 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
 import { CommonModule, NgFor } from '@angular/common';
-import { AppRoutingModule } from "../app-routing.module";
+import { RouterLink } from '@angular/router';
+// import { AppRoutingModule } from "../app-routing.module";
 
 @Component({
   selector: 'app-heroes',
   standalone: true,
-  imports: [CommonModule, NgFor, AppRoutingModule],
+  imports: [CommonModule, NgFor, RouterLink],
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
 })

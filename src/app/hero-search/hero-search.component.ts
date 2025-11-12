@@ -7,13 +7,14 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
-import { AppRoutingModule } from "../app-routing.module";
+// import { AppRoutingModule } from "../app-routing.module";
+import { RouterLink } from '@angular/router';
 import { AsyncPipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-hero-search',
   standalone: true,
-  imports: [NgFor, AppRoutingModule, AsyncPipe],
+  imports: [NgFor, AsyncPipe, RouterLink],
   templateUrl: './hero-search.component.html',
   styleUrl: './hero-search.component.css'
 })
